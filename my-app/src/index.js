@@ -2,11 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style.css';
-import { Container } from 'react-bootstrap';
-import { Navbar } from 'react-bootstrap';
-import { Nav } from 'react-bootstrap';
-import {NavDropdown} from 'react-bootstrap';
-// import {Image} from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
+import { Navbar, Nav, NavDropdown } from 'react-bootstrap';
+import { Image } from 'react-bootstrap';
+
 
 
 /* Icons */
@@ -51,5 +50,53 @@ const TopMenu = () => (
   </Navbar>
 );
 
+
+const MiddleSection = () => (
+  <Container>
+    <Row className="justify-content-center mx-5">
+      <Col>
+        <h1>Identify, explore and share your observations of wild plants</h1>
+        <p>Pl@ntNet is a tool to help to identify plants with pictures. It is organized in different thematic and geographical floras. Choose the one that corresponds to your region or area of interest from the list below. If you don't know what to choose, select "World flora" which has the widest coverage but will give less accurate results than a more focused flora.</p>
+      </Col>
+      <Col>
+        <Image src={require("./youtube_inbed.png")}/>
+      </Col>
+    </Row>
+  </Container>
+);
+
+const Bottom = () => (
+  <Container>
+    <Row>
+      <Col>
+        <Image src={require("./latest-cont.png")}/>
+      </Col>
+      <Col>
+        <div className="rounded gray-div shadow-sm p-3 mx-auto d-flex align-items-center justify-content-center flex-column">
+          <h4 className="text-center mb-3">
+            <Image src="./planet_logo_no_text.svg" width="37" alt=""/>
+              "Try Pl@ntnet!"
+          </h4>
+
+          <div className="file-input shadow text-center">
+            <h3>add / drop and image</h3>
+          </div>
+
+          <a href="https://identify.plantnet.org/" className="mt-3">or add an url</a>
+        </div>
+      </Col>
+      <Col>
+        <Image src={require("./latest-obs-spec.png")} />
+      </Col>
+    </Row>
+  </Container>
+);
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<TopMenu />);
+root.render(
+  <Container fluid>
+    <TopMenu />
+    <MiddleSection />
+    <Bottom/>
+  </Container>
+);
