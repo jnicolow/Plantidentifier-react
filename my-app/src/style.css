@@ -1,0 +1,84 @@
+:root {
+  --primary-color: #8EB533;
+  --secondary-color:#6F7275;
+  --tertiary-color: #F8F9FA;
+  --text-color: #212529;
+}
+
+/* ALL */
+body {
+  color: var(--text-color);
+}
+
+a {
+  color: var(--primary-color);
+  text-decoration: None;
+}
+
+.primary-color {
+  color: var(--primary-color)
+}
+
+.secondary-color {
+  color: var(--secondary-color)
+}
+
+/* NAV BAR */
+
+a.dropdown {
+  color: var(--tertiary-color);
+}
+
+a.dropdown-menu {
+  background-color: var(--tertiary-color);
+}
+
+nav ul span {
+  color: var(--secondary-color);
+}
+
+.nav-icons {
+  color:var(--primary-color);
+}
+
+.btn-custom {
+  background-color: var(--tertiary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+.btn-custom:hover {
+  color: var(--primary-color)
+}
+
+.btn-custom-fill {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: white;
+}
+
+.btn-custom:hover {
+  color: var(--tertiary-color)
+}
+
+
+/* MIDDLE */
+
+
+
+
+/* BOTTOM */
+
+.gray-div {
+  background-color: var(--tertiary-color);
+  border-color: var(--secondary-color);
+  width: auto;
+  height: fit-content;
+}
+
+.file-input {
+  background-color: white;
+  border-color: var(--tertiary-color);
+  width: 90%;
+  height: 100px;
+  box-sizing: border-box;
+}
